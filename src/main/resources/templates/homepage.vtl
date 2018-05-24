@@ -1,87 +1,90 @@
-	<h1 id="header">WILDLIFE TRACKER</h1>
-	<hr>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-4">
-				<h1 class="top">SIGHTING</h1>
-				<form action="">
-					<div class="form-group">
-						<label>Game Ranger</label>
-						<input type="text" id="ranger" name="ranger" class="form-control" placeholder="Ranger Name">
-					</div>
-					<div class="form-group">
-						<label>Type of animal</label>
-						<input type="text" id="animal" name="animal" class="form-control" placeholder="Animal spotted">
-					</div>
-					<div class="form-group">
-						<label>Endangered species?</label>
-						<br>
-						<label>
-							<input type="radio" value="Yes" name="radio" id="yes">
-							<span for="yes">Yes</span>
-						</label>
-						<br>
-						<label>
-							<input type="radio" value="No" name="radio" id="no">
-							<span for="no">No</span>
-						</label>
-					</div>
-					<label>Location:</label>
-					<br>
-					<select>
-						<option label="">--Choose location--</option>
-						<option value="Zone A">Zone A</option>
-						<option value="Zone B">Zone B</option>
-						<option value="Zone C">Zone C</option>
-						<option value="Zone D">Zone D</option>
-					</select>
-					<label>Animal's Health:</label><br>
-					<select>
-						<option label="">--Condition--</option>
-						<option value="Ill">Ill</option>
-						<option value="Healthy">Healthy</option>
-						<option value="Okay">Okay</option>	
-					</select>
-					<div class="form-group">
-					<label>Age</label>
-					<select>
-						<option label="">--Estimated guess--</option>
-						<option value="Newborn">Newborn</option>
-						<option value="Young">Young</option>
-						<option value="Adult">Adult</option>
-					</select>
-				</div>
-					<button class="btn btn-primary" type="submit">Add sighting  <span class="glyphicon glyphicon-plus"></span></button>
-				</form>
-			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-6">
-					<div class="bd bd-gray-300 rounded table-responsive">
-							<table class="table mg-b-0">
-								<thead>
-									<tr>
-										<th>Ranger:</th>
-										<th>Animal:</th>
-										<th>Endangered:</th>
-										<th>Location:</th>
-										<th>Health:</th>
-										<th>Age:</th>
-										<th>Timestamp:</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Will Mutai</td>
-										<td>Cheetah</td>
-										<td>Yes</td>
-										<td>Zone A</td>
-										<td>Healthy</td>
-										<td>Young</td>
-										<td>23rd May, 2018</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-			</div>
-		</div>
-	</div>
+<body>
+<h1 id="header">WILDLIFE TRACKER</h1>
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h1 class="top">SIGHTING</h1>
+            <form action="">
+                <div class="form-group">
+                    <label>Game Ranger</label>
+                    <input type="text" id="ranger" name="ranger" class="form-control" placeholder="Ranger Name">
+                </div>
+                <div class="form-group">
+                    <label>Type of animal</label>
+                    <input type="text" id="animal" name="animal" class="form-control" placeholder="Animal spotted">
+                </div>
+                <div class="form-group">
+                    <label>Endangered species?</label>
+                    <br>
+                    <label>
+                        <input type="radio" value="Yes" name="radio" id="yes">
+                        <span for="yes">Yes</span>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" value="No" name="radio" id="no">
+                        <span for="no">No</span>
+                    </label>
+                </div>
+                <label>Location:</label>
+                <br>
+                <select>
+                    <option label="">--Choose location--</option>
+                    <option value="Zone A">Zone A</option>
+                    <option value="Zone B">Zone B</option>
+                    <option value="Zone C">Zone C</option>
+                    <option value="Zone D">Zone D</option>
+                </select>
+                <label>Animal's Health:</label><br>
+                <select>
+                    <option label="">--Condition--</option>
+                    <option value="Ill">Ill</option>
+                    <option value="Healthy">Healthy</option>
+                    <option value="Okay">Okay</option>
+                </select>
+                <div class="form-group">
+                    <label>Age</label>
+                    <select>
+                        <option label="">--Estimated guess--</option>
+                        <option value="Newborn">Newborn</option>
+                        <option value="Young">Young</option>
+                        <option value="Adult">Adult</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit">Add sighting
+                    <span class="glyphicon glyphicon-plus"></span></button>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <div class="bd bd-gray-300 rounded table-responsive">
+                <table class="table mg-b-0">
+                    <thead>
+                        <tr>
+                            <th>Ranger:</th>
+                            <th>Animal:</th>
+                            <th>Endangered:</th>
+                            <th>Location:</th>
+                            <th>Health:</th>
+                            <th>Age:</th>
+                            <th>Timestamp:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Will Mutai</td>
+                            <td>Cheetah</td>
+                            <td>Yes</td>
+                            <td>Zone A</td>
+                            <td>Healthy</td>
+                            <td>Young</td>
+                            <td>23rd May, 2018</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
