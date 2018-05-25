@@ -19,6 +19,7 @@ public class App{
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("sightings", Sighting.all());
             model.put("animals",Animal.all());
+            model.put("AnimalClass", Animal.class);
             model.put("template", "templates/homepage.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
@@ -31,7 +32,7 @@ public class App{
             String location = request.queryParams("location");
             String health = request.queryParams("health");
             String age = request.queryParams("age");
-            Animal newAnimal = new Animal(animal, endangered);
+            Animal newAnimal = new Animal(animal, endangered, health, age);
             newAnimal.save();
             Sighting newSighting = new Sighting(ranger, location, newAnimal.getId());
             newSighting.save();

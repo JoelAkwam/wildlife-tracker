@@ -73,15 +73,21 @@
                         </tr>
                     </thead>
                     <tbody>
+                        #foreach($sighting in $sightings)
                         <tr>
-                            <td>Will Mutai</td>
-                            <td>Cheetah</td>
-                            <td>Yes</td>
-                            <td>Zone A</td>
-                            <td>Healthy</td>
-                            <td>Young</td>
-                            <td>23rd May, 2018</td>
+                            <td>$sighting.getRanger()</td>
+                            #if ($AnimalClass.getAnimalName($sighting.getAnimalId()))
+								<td>$AnimalClass.getAnimalName($sighting.getAnimalId())</td>
+							#else
+								<td></td>
+							#end
+                            <td></td>
+                            <td>$sighting.getLocation()</td>
+                            <td></td>
+                            <td></td>
+                            <td>$sighting.getTimestamp()</td>
                         </tr>
+                        #end
                     </tbody>
                 </table>
             </div>
