@@ -29,6 +29,7 @@ public class App{
             String location = request.queryParams("location");
             String condition = request.queryParams("condition");
             String age = request.queryParams("age");
+            Animal newAnimal = new Animal(animal, endangered);
             model.put("template", "templates/homepage.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
