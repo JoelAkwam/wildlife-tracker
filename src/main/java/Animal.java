@@ -28,7 +28,7 @@ public class Animal{
             this.id = (int) con.createQuery(sql, true)
             .addParameter("animal", this.animal)
             .addParameter("endangered", this.endangered)
-            .throwOnMappingFailure(false);
+            .throwOnMappingFailure(false)
             .executeUpdate()
             .getKey();
 
@@ -42,4 +42,6 @@ public class Animal{
            .throwOnMappingFailure(false)
            .executeAndFetch(Animal.class);
         }
+    }
 }
+
