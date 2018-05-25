@@ -17,6 +17,8 @@ public class App{
 
         get("/homepage", (request, respond) ->{
             Map<String, Object> model = new HashMap<String, Object>();
+            model.put("sightings", Sighting.all());
+            model.put("animals",Animal.all());
             model.put("template", "templates/homepage.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
@@ -31,6 +33,8 @@ public class App{
             String age = request.queryParams("age");
             Animal newAnimal = new Animal(animal, endangered);
             newAnimal.save();
+            Sighting newSighting = new Sighting(ranger, location, newAnimal.getId());
+            newSighting.save();
             model.put("template", "templates/homepage.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
