@@ -23,7 +23,7 @@ public class App{
 
         post("/details", (request, respond) ->{
             Map<String, Object> model = new HashMap<String, Object>();
-            String ranger = request.queryParams("rander");
+            String ranger = request.queryParams("ranger");
             String animal = request.queryParams("animal");
             String endangered = request.queryParams("endangered");
             String location = request.queryParams("location");
