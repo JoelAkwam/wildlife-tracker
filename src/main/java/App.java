@@ -36,6 +36,9 @@ public class App{
             newAnimal.save();
             Sighting newSighting = new Sighting(ranger, location, newAnimal.getId());
             newSighting.save();
+            model.put("sightings", Sighting.all());
+            model.put("animals",Animal.all());
+            model.put("AnimalClass", Animal.class);
             model.put("template", "templates/homepage.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());

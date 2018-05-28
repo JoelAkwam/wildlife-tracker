@@ -76,15 +76,27 @@
                         #foreach($sighting in $sightings)
                         <tr>
                             <td>$sighting.getRanger()</td>
-                            #if ($AnimalClass.getAnimalName($sighting.getAnimalId()))
-								<td>$AnimalClass.getAnimalName($sighting.getAnimalId())</td>
-							#else
-								<td></td>
-							#end
-                            <td></td>
+                            #if($AnimalClass.getAnimalName($sighting.getAnimalId()))
+                                <td>$AnimalClass.getAnimalName($sighting.getAnimalId())</td>
+                                    #else
+                                        <td></td>
+                                        #end
+                            #if($AnimalClass.getAnimalEndangered($sighting.getAnimalId()))
+                                <td>$AnimalClass.getAnimalEndangered($sighting.getAnimalId())</td>
+                                    #else
+                                         <td></td>
+                                         #end
                             <td>$sighting.getLocation()</td>
-                            <td></td>
-                            <td></td>
+                            #if($AnimalClass.getAnimalHealth($sighting.getAnimalId()))
+                                <td>$AnimalClass.getAnimalHealth($sighting.getAnimalId())</td>
+                                    #else
+                                        <td></td>
+                                        #end
+                            #if($AnimalClass.getAnimalAge($sighting.getAnimalId()))
+                                <td>$AnimalClass.getAnimalAge($sighting.getAnimalId())</td>
+                                    #else
+                                        <td></td>
+                                        #end
                             <td>$sighting.getTimestamp()</td>
                         </tr>
                         #end
